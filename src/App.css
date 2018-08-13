@@ -11,3 +11,12 @@
 h2 {
   margin-top: 40px;
 }
+
+button {
+	width: 30%;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	line-height: 40px;
+	font-size: 25px;
+}

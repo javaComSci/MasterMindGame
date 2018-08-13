@@ -11,7 +11,7 @@ class Feedback extends React.Component {
 		let userAnswer = this.props.userAnswer;
 		let absDiff = Math.abs(expectedNumber - userAnswer);
 		if (!userAnswer) {
-			return <div className="noAnswer">Please enter an answer!</div>;
+			return <div className="noAnswer">Please enter a valid answer!</div>;
 		}
 
 		if (absDiff == 0){
@@ -27,7 +27,9 @@ class Feedback extends React.Component {
 
 	render(){
 		return (
-			<div>{this.getFeedbackText()}</div>
+			<div>
+				{this.getFeedbackText()}
+			</div>
 		);
 	}
 }

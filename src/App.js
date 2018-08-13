@@ -6,9 +6,9 @@ import './App.css';
 class App extends Component {
   constructor(){
     super();
-    this.expectedNumber = this.generateRandomNumber();
     this.state = {
       userAnswer: 0,
+      expectedNumber: this.generateRandomNumber(),
     };
   }
 
@@ -17,17 +17,25 @@ class App extends Component {
   }
 
   setUserAnswer = (userAnswer) => {
+    console.log(this.state.expectedNumber);
     this.setState({
       userAnswer: userAnswer,
     });
+  }
+
+  newGame = () => {
+    this.setState({
+      userAnswer: 0,
+      expectedNumber: this.generateRandomNumber(),
+    })
   }
 
   render() {
     return (
       <div className="App">
         <h2> Guess the number between 1 and 100! </h2>
-        <UserInput setUserAnswer={this.setUserAnswer} />
-        <Feedback expectedNumber={this.expectedNumber} userAnswer={this.state.userAnswer}/>
+        <UserInput setUserAnswer={this.setUserAnswer} newGame={this.newGame} />
+        <Feedback expectedNumber={this.state.expectedNumber} userAnswer={this.state.userAnswer}/>
       </div>
     );
   }
