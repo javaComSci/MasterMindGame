@@ -1,0 +1,22 @@
+h3 {
+	display: inline;
+}
+
+.userinput {
+	width: 25%;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	line-height: 33px;
+	font-size: 25px;
+}
+
+
+.submit {
+	width: 10%;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	line-height: 40px;
+	font-size: 25px;
+}

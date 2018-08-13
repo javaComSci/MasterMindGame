@@ -1,4 +1,5 @@
 import React from 'react';
+import './UserInput.css';
 
 class UserInput extends React.Component {
 	constructor(props){
@@ -22,8 +23,8 @@ class UserInput extends React.Component {
 		return (
 			<div> 
 				<form onSubmit={this.onSubmitHandler}>
-					<input onChange={this.onChangeHandler} value={this.state.userInput}/>	
-					<input type="submit"/>
+					<h3> Your input: </h3> <input onChange={this.onChangeHandler} value={this.state.userInput} className="userinput"/>	
+					<input type="submit" className="submit"/>
 				</form>
 			</div>
 		)

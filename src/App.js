@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import UserInput from './UserInput';
 import Feedback from './Feedback';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -10,7 +9,7 @@ class App extends Component {
     this.expectedNumber = this.generateRandomNumber();
     this.state = {
       userAnswer: 0,
-    }
+    };
   }
 
   generateRandomNumber(){
@@ -26,6 +25,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h2> Guess the number between 1 and 100! </h2>
         <UserInput setUserAnswer={this.setUserAnswer} />
         <Feedback expectedNumber={this.expectedNumber} userAnswer={this.state.userAnswer}/>
       </div>
