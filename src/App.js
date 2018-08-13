@@ -10,6 +10,7 @@ class App extends Component {
       userAnswer: 0,
       expectedNumber: this.generateRandomNumber(),
     };
+
   }
 
   generateRandomNumber(){
@@ -22,19 +23,12 @@ class App extends Component {
       userAnswer: userAnswer,
     });
   }
-
-  newGame = () => {
-    this.setState({
-      userAnswer: 0,
-      expectedNumber: this.generateRandomNumber(),
-    })
-  }
-
+  
   render() {
     return (
       <div className="App">
         <h2> Guess the number between 1 and 100! </h2>
-        <UserInput setUserAnswer={this.setUserAnswer} newGame={this.newGame} />
+        <UserInput setUserAnswer={this.setUserAnswer}/>
         <Feedback expectedNumber={this.state.expectedNumber} userAnswer={this.state.userAnswer}/>
       </div>
     );
